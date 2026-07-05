@@ -3,241 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoring de Risque - Finance Analytics</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Finance Analytics - Projets d'Analyse Financière</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .project-detail {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-        .project-detail .container {
-            max-width: 900px;
-        }
-        .project-detail h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-        .project-detail .meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-        .project-detail .meta span {
-            background: #f1f5f9;
-            padding: 4px 14px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            color: #475569;
-        }
-        .project-detail .meta .tag-blue {
-            background: #dbeafe;
-            color: #1d4ed8;
-        }
-        .project-detail h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 40px;
-            margin-bottom: 16px;
-        }
-        .project-detail p {
-            color: #475569;
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-        .project-detail ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-        .project-detail ul li {
-            padding: 8px 0;
-            color: #475569;
-            border-bottom: 1px solid #f1f5f9;
-            font-size: 0.95rem;
-        }
-        .project-detail ul li:last-child {
-            border-bottom: none;
-        }
-        .highlight-box {
-            background: #f1f5f9;
-            padding: 24px;
-            border-radius: 12px;
-            margin: 30px 0;
-            border-left: 4px solid #2563eb;
-        }
-        .highlight-box strong {
-            color: #0f172a;
-        }
-        .code-block {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            font-size: 0.85rem;
-            margin: 20px 0;
-        }
-        .btn-back {
-            display: inline-block;
-            margin-top: 40px;
-            color: #2563eb;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .btn-back:hover {
-            text-decoration: underline;
-        }
-
-        /* SECTION TÉLÉCHARGEMENT */
-        .download-section {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 28px;
-            margin: 30px 0;
-        }
-        .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-            margin-top: 16px;
-        }
-        .download-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px 16px;
-            background: #f8fafc;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #0f172a;
-            transition: background 0.2s, transform 0.2s, border-color 0.2s;
-            border: 2px solid transparent;
-            text-align: center;
-        }
-        .download-card:hover {
-            background: #f1f5f9;
-            transform: translateY(-2px);
-            border-color: #2563eb;
-        }
-        .download-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
-        }
-        .download-card .label {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        .download-card .ext {
-            font-size: 0.7rem;
-            color: #94a3b8;
-            margin-top: 4px;
-        }
-
-        .btn-external {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-            margin-right: 12px;
-            margin-top: 8px;
-        }
-        .btn-google {
-            background: #0f9d58;
-            color: #ffffff;
-        }
-        .btn-google:hover {
-            background: #0b7e48;
-        }
-        .btn-github {
-            background: #0f172a;
-            color: #ffffff;
-        }
-        .btn-github:hover {
-            background: #1e293b;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 16px;
-            margin: 20px 0;
-        }
-        .stat-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-        }
-        .stat-card .number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #2563eb;
-        }
-        .stat-card .label {
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-
-        .table-wrap {
-            overflow-x: auto;
-            margin: 16px 0;
-        }
-        .table-wrap table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
-        .table-wrap th {
-            background: #f1f5f9;
-            padding: 10px 12px;
-            text-align: left;
-            font-weight: 600;
-            color: #0f172a;
-        }
-        .table-wrap td {
-            padding: 8px 12px;
-            border-bottom: 1px solid #f1f5f9;
-        }
-        .table-wrap tr:hover td {
-            background: #f8fafc;
-        }
-
-        .badge-red {
-            display: inline-block;
-            background: #fee2e2;
-            color: #dc2626;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        .badge-green {
-            display: inline-block;
-            background: #dcfce7;
-            color: #16a34a;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        .badge-orange {
-            display: inline-block;
-            background: #fef3c7;
-            color: #d97706;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body>
 
@@ -249,198 +17,313 @@
                 <span class="brand-text">Finance Analytics</span>
             </div>
             <ul class="nav-links">
-                <li><a href="../../index.html#accueil">Accueil</a></li>
-                <li><a href="../../index.html#projets">Projets</a></li>
-                <li><a href="../../index.html#a-propos">À propos</a></li>
-                <li><a href="../../index.html#competences">Compétences</a></li>
-                <li><a href="../../index.html#contact">Contact</a></li>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="menu-toggle" id="menuToggle">☰</button>
         </div>
     </nav>
 
-    <!-- ============ PROJET ============ -->
-    <section class="project-detail">
+    <!-- ============ HERO SECTION ============ -->
+    <section id="accueil" class="hero">
         <div class="container">
-
-            <span style="background:#2563eb; color:white; padding:4px 12px; border-radius:12px; font-size:0.7rem; font-weight:600;">⭐ Projet</span>
-            <h1>📊 Scoring de Risque de Défaillance</h1>
-
-            <div class="meta">
-                <span>📅 Janvier 2025</span>
-                <span class="tag-blue">🐍 Python</span>
-                <span class="tag-blue">📊 Excel</span>
-                <span class="tag-blue">📈 Analyse financière</span>
-                <span class="tag-blue">🏛️ Restructuration</span>
-            </div>
-
-            <!-- ============ STATS RAPIDES ============ -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="number">20</div>
-                    <div class="label">Entreprises analysées</div>
-                </div>
-                <div class="stat-card">
-                    <div class="number">10</div>
-                    <div class="label">En zone rouge ⚠️</div>
-                </div>
-                <div class="stat-card">
-                    <div class="number">50%</div>
-                    <div class="label">Taux de risque élevé</div>
-                </div>
-                <div class="stat-card">
-                    <div class="number">80%</div>
-                    <div class="label">Gain de temps estimé</div>
-                </div>
-            </div>
-
-            <!-- ============ SECTION TÉLÉCHARGEMENT ============ -->
-            <div class="download-section">
-                <h2 style="margin-top:0;">📥 Télécharger le projet</h2>
-                <p style="color:#64748b; font-size:0.95rem;">
-                    Accédez aux fichiers interactifs et à la présentation complète.
+            <div class="hero-content">
+                <div class="hero-badge">🚀 Portfolio Finance</div>
+                <h1>Analyse Financière & <span class="highlight">Restructuration</span> d'Entreprises</h1>
+                <p class="hero-subtitle">
+                    Projets conçus pour la <strong>détection de risques</strong>, le <strong>pilotage de trésorerie</strong>,
+                    les <strong>prévisions financières</strong> et la <strong>modélisation de scénarios</strong>.
                 </p>
-
-                <div class="download-grid">
-                    <a href="Scoring_Risques.xlsx" download class="download-card">
-                        <span class="icon">📊</span>
-                        <span class="label">Excel</span>
-                        <span class="ext">.xlsx • 20 entreprises</span>
-                    </a>
-                    <a href="Canva_docs_lettre_de_recommandation_simple.pdf" target="_blank" class="download-card">
-                        <span class="icon">📄</span>
-                        <span class="label">Présentation PDF</span>
-                        <span class="ext">.pdf • 5 pages</span>
-                    </a>
-                    <a href="scoring_risque.ipynb" download class="download-card">
-                        <span class="icon">📓</span>
-                        <span class="label">Notebook Python</span>
-                        <span class="ext">.ipynb • Code complet</span>
-                    </a>
-                    <a href="data/entreprises_fictives.csv" download class="download-card">
-                        <span class="icon">📋</span>
-                        <span class="label">Données CSV</span>
-                        <span class="ext">.csv • Données brutes</span>
-                    </a>
+                <div class="hero-badges">
+                    <span class="badge">📊 Analyse financière</span>
+                    <span class="badge">💰 Restructuration</span>
+                    <span class="badge">📈 Prévisions</span>
+                    <span class="badge">🏦 Trésorerie</span>
+                    <span class="badge">⚠️ Détection de risques</span>
                 </div>
-
-                <div style="margin-top:20px; display:flex; flex-wrap:wrap;">
-                    <a href="https://docs.google.com/spreadsheets/d/1vYii9bIY0uhxBrL5FgQv-0cl6puXHtG4v2C9593RoBc" target="_blank" class="btn-external btn-google">
-                        🔗 Voir sur Google Sheets
-                    </a>
-                    <a href="https://github.com/Data-Too/FinanceRS/tree/main/projets/scoring-risque" target="_blank" class="btn-external btn-github">
-                        🐙 Voir sur GitHub
-                    </a>
+                <div class="hero-actions">
+                    <a href="#projets" class="btn-primary">Voir les projets ↓</a>
+                    <a href="#contact" class="btn-secondary">Me contacter</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ CONTEXTE ============ -->
-            <h2>🎯 Contexte</h2>
-            <p>
-                Ce projet simule un <strong>outil d'aide à la décision</strong> pour un cabinet d'administrateur judiciaire.
-                L'objectif est d'identifier rapidement les entreprises présentant un risque élevé de
-                <strong>cessation de paiement</strong> à partir de leurs données financières.
-            </p>
-
-            <div class="highlight-box">
-                <strong>💡 Problématique métier :</strong><br>
-                Un administrateur judiciaire reçoit des dizaines de dossiers d'entreprises en difficulté.
-                Comment prioriser les dossiers les plus urgents ? Comment objectiver le diagnostic pour le tribunal ?
+    <!-- ============ PROJETS SECTION ============ -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🚀 Projets Finance</h2>
+                <p class="section-subtitle">
+                    Chaque projet simule un cas concret d'analyse financière.
+                    Cliquez sur un projet pour découvrir les détails, les données et les livrables.
+                </p>
             </div>
 
-            <!-- ============ MÉTHODOLOGIE ============ -->
-            <h2>⚙️ Méthodologie</h2>
-            <ul>
-                <li><strong>1. Collecte des données :</strong> 20 entreprises, 7 indicateurs financiers</li>
-                <li><strong>2. Calcul des ratios :</strong> Marge nette, endettement, trésorerie</li>
-                <li><strong>3. Construction du score :</strong> Pondération des indicateurs → score sur 100</li>
-                <li><strong>4. Catégorisation :</strong> 🟢 Faible / 🟠 Modéré / 🔴 Élevé</li>
-            </ul>
+            <div class="projects-grid">
 
-            <div class="highlight-box">
-                <strong>🔑 Formule du score :</strong><br>
-                <code>Score = (Endettement × 30) + (Retard × 1,5) + (Trésorerie × -20) + (Marge × -1)</code>
+                <!-- ===== PROJET 1 : Scoring de Risque (TERMINÉ) ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📊</span>
+                        <span class="project-status" style="background:#dcfce7; color:#166534;">✅ Terminé</span>
+                    </div>
+                    <h3>Scoring de Risque de Défaillance</h3>
+                    <p>
+                        Modèle de scoring identifiant les entreprises à risque élevé
+                        de cessation de paiement (20 entreprises, 4 secteurs).
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">Analyse financière</span>
+                    </div>
+                    <div class="project-links" style="display:flex; flex-direction:column; gap:6px; margin-top:12px;">
+                        <a href="projets/scoring-risque/" class="btn-project">Voir le projet →</a>
+                        <div style="display:flex; gap:12px; font-size:0.75rem; flex-wrap:wrap;">
+                            <a href="projets/scoring-risque/Scoring_Risques.xlsx" download style="color:#2563eb; text-decoration:none;">📊 Excel</a>
+                            <a href="projets/scoring-risque/Canva_docs_lettre_de_recommandation_simple.pdf" target="_blank" style="color:#2563eb; text-decoration:none;">📄 PDF</a>
+                            <a href="https://docs.google.com/spreadsheets/d/1vYii9bIY0uhxBrL5FgQv-0cl6puXHtG4v2C9593RoBc" target="_blank" style="color:#0f9d58; text-decoration:none;">🔗 Google Sheets</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 2 : Dashboard Trésorerie (À VENIR) ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">💰</span>
+                        <span class="project-status" style="background:#fef3c7; color:#92400e;">⏳ En cours</span>
+                    </div>
+                    <h3>Dashboard de Trésorerie Interactive</h3>
+                    <p>
+                        Visualisation des flux de trésorerie avec identification
+                        des périodes de tension et génération d'alertes automatiques.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Plotly</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Trésorerie</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">🚧 En développement</span>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 3 : Plan de Restructuration (À VENIR) ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📈</span>
+                        <span class="project-status" style="background:#fef3c7; color:#92400e;">⏳ En cours</span>
+                    </div>
+                    <h3>Plan de Restructuration - Scénarios</h3>
+                    <p>
+                        Simulation de scénarios de sauvegarde (réduction de charges,
+                        cession d'actifs, report de dettes) avec comparaison des impacts.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">Modélisation</span>
+                        <span class="tag">Scénarios</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">🚧 En développement</span>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 4 : Prévision de CA (À VENIR) ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📉</span>
+                        <span class="project-status" style="background:#f1f5f9; color:#94a3b8;">📅 Planifié</span>
+                    </div>
+                    <h3>Prévision de Chiffre d'Affaires</h3>
+                    <p>
+                        Modèle de prévision des ventes sur 12 mois utilisant des
+                        méthodes statistiques (ARIMA, Prophet) pour anticiper les tendances.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Prophet</span>
+                        <span class="tag">Time Series</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">📅 À venir</span>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 5 : Analyse de Rentabilité (À VENIR) ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📊</span>
+                        <span class="project-status" style="background:#f1f5f9; color:#94a3b8;">📅 Planifié</span>
+                    </div>
+                    <h3>Analyse de Rentabilité par Produit</h3>
+                    <p>
+                        Dashboard interactif analysant la rentabilité de différents
+                        produits/services pour identifier les leviers de croissance.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Analyse de marge</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">📅 À venir</span>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 6 : Simulation BFR (À VENIR) ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🏦</span>
+                        <span class="project-status" style="background:#f1f5f9; color:#94a3b8;">📅 Planifié</span>
+                    </div>
+                    <h3>Simulation du Besoin en Fonds de Roulement</h3>
+                    <p>
+                        Modélisation du BFR avec simulation de l'impact des délais
+                        de paiement clients/fournisseurs sur la trésorerie.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">BFR</span>
+                        <span class="tag">Simulation</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">📅 À venir</span>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- ============ RÉSULTATS ============ -->
-            <h2>📋 Résultats</h2>
-
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr><th>Catégorie</th><th>Nombre</th><th>Pourcentage</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><span class="badge-green">🟢 Faible</span></td><td>5</td><td>25%</td></tr>
-                        <tr><td><span class="badge-orange">🟠 Modéré</span></td><td>5</td><td>25%</td></tr>
-                        <tr><td><span class="badge-red">🔴 Élevé</span></td><td>10</td><td>50%</td></tr>
-                    </tbody>
-                </table>
+    <!-- ============ À PROPOS ============ -->
+    <section id="a-propos" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>👋 À propos</h2>
+                    <p>
+                        Ce portfolio regroupe mes projets en <strong>analyse financière</strong>
+                        et <strong>finance d'entreprise</strong>. Chaque projet est conçu
+                        pour répondre à un besoin opérationnel rencontré par les
+                        <strong>administrateurs judiciaires</strong>, les <strong>directions financières</strong>
+                        ou les <strong>cabinets de conseil</strong>.
+                    </p>
+                    <p>
+                        <strong>6 projets</strong> sont prévus, couvrant :
+                    </p>
+                    <ul>
+                        <li>✅ Scoring de risque de défaillance</li>
+                        <li>⏳ Dashboard de trésorerie</li>
+                        <li>⏳ Plan de restructuration</li>
+                        <li>📅 Prévision de CA</li>
+                        <li>📅 Analyse de rentabilité</li>
+                        <li>📅 Simulation BFR</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Projet terminé</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">En cours</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Planifiés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Au total</span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="highlight-box">
-                <strong>⚠️ 50% des entreprises en zone rouge</strong><br>
-                Le secteur immobilier concentre 80% des risques élevés (4 entreprises sur 5).
+    <!-- ============ COMPÉTENCES ============ -->
+    <section id="competences" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🛠️ Compétences</h2>
+                <p class="section-subtitle">
+                    Les compétences mobilisées dans mes projets.
+                </p>
             </div>
-
-            <!-- ============ TOP 5 ============ -->
-            <h2>🏆 Top 5 des entreprises les plus risquées</h2>
-
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr><th>#</th><th>Entreprise</th><th>Secteur</th><th>Score</th><th>Trésorerie</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td><strong>SCI SIGMA</strong></td><td>Immobilier</td><td><span class="badge-red">81.0</span></td><td>-8 000 €</td></tr>
-                        <tr><td>2</td><td><strong>SAS EPSILON</strong></td><td>Construction</td><td><span class="badge-red">79.0</span></td><td>-15 000 €</td></tr>
-                        <tr><td>3</td><td><strong>SARL LAMBDA</strong></td><td>Immobilier</td><td><span class="badge-red">76.0</span></td><td>12 000 €</td></tr>
-                        <tr><td>4</td><td><strong>SAS KAPPA</strong></td><td>Construction</td><td><span class="badge-red">76.0</span></td><td>-25 000 €</td></tr>
-                        <tr><td>5</td><td><strong>SCI NU</strong></td><td>Immobilier</td><td><span class="badge-red">68.0</span></td><td>8 000 €</td></tr>
-                    </tbody>
-                </table>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📊 Analyse Financière</h3>
+                    <ul>
+                        <li>Analyse des flux de trésorerie</li>
+                        <li>Calcul des ratios</li>
+                        <li>Diagnostic d'entreprise</li>
+                        <li>Modélisation DCF</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🐍 Data & Programmation</h3>
+                    <ul>
+                        <li>Python (Pandas, NumPy)</li>
+                        <li>Scikit-learn</li>
+                        <li>Plotly</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>📑 Modélisation</h3>
+                    <ul>
+                        <li>Excel (Power Query, TCD)</li>
+                        <li>Modélisation de scénarios</li>
+                        <li>Business Plan</li>
+                        <li>Simulation financière</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🏢 Métier Finance</h3>
+                    <ul>
+                        <li>Restructuration d'entreprises</li>
+                        <li>Détection de risques</li>
+                        <li>Contrôle de gestion</li>
+                        <li>Audit financier</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ RECOMMANDATIONS ============ -->
-            <h2>💡 Recommandations</h2>
-
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr><th>Urgence</th><th>Entreprises</th><th>Action</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="badge-red">Immédiate</span></td>
-                            <td>SCI SIGMA, SAS EPSILON, SARL LAMBDA, SAS KAPPA</td>
-                            <td>Réunion sous 48h</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge-orange">Rapide</span></td>
-                            <td>SCI NU, SCI GAMMA, EURL OMEGA, SARL ZETA, SAS UPSILON</td>
-                            <td>Revue sous 15 jours</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge-green">Surveillance</span></td>
-                            <td>Autres 10 entreprises</td>
-                            <td>Suivi mensuel</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📬 Contact</h2>
+                <p class="section-subtitle">
+                    Intéressé par mon profil ? N'hésitez pas à me contacter !
+                </p>
             </div>
-
-            <!-- ============ COMPÉTENCES ============ -->
-            <h2>🛠️ Compétences démontrées</h2>
-            <ul>
-                <li>✅ Analyse financière (ratios, trésorerie, endettement)</li>
-                <li>✅ Modélisation de scoring de risque</li>
-                <li>✅ Automatisation des calculs (Excel / Google Sheets)</li>
-                <li>✅ Data visualisation et reporting</li>
-                <li>✅ Capacité à formuler des recommandations stratégiques</li>
-            </ul>
-
-            <a href="../../index.html#projets" class="btn-back">← Retour aux projets</a>
-
+            <div class="contact-cards">
+                <a href="mailto:votre.email@email.com" class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">votre.email@email.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/votreprofil" class="contact-card" target="_blank">
+                    <span class="contact-icon">💼</span>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">Mon profil LinkedIn</span>
+                </a>
+                <a href="https://github.com/Data-Too" class="contact-card" target="_blank">
+                    <span class="contact-icon">🐙</span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">@Data-Too</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -448,6 +331,7 @@
     <footer class="footer">
         <div class="container">
             <p>© 2025 - Finance Analytics | Projets d'analyse financière</p>
+            <p class="footer-sub">6 projets prévus - 1 terminé, 2 en cours, 3 planifiés</p>
         </div>
     </footer>
 
