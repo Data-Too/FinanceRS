@@ -7,86 +7,72 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Styles spécifiques au projet */
         .project-detail {
             padding: 80px 0;
             background: #f8fafc;
         }
-
         .project-detail .container {
             max-width: 900px;
         }
-
         .project-detail h1 {
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 20px;
         }
-
         .project-detail .meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 12px;
             margin-bottom: 30px;
-            color: #64748b;
-            font-size: 0.9rem;
         }
-
         .project-detail .meta span {
             background: #f1f5f9;
             padding: 4px 14px;
             border-radius: 12px;
+            font-size: 0.85rem;
+            color: #475569;
         }
-
         .project-detail .meta .tag-blue {
             background: #dbeafe;
             color: #1d4ed8;
         }
-
         .project-detail h2 {
             font-size: 1.5rem;
             font-weight: 700;
             margin-top: 40px;
             margin-bottom: 16px;
         }
-
         .project-detail p {
             color: #475569;
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 16px;
         }
-
         .project-detail ul {
             list-style: none;
             padding: 0;
             margin-bottom: 20px;
         }
-
         .project-detail ul li {
             padding: 8px 0;
             color: #475569;
             border-bottom: 1px solid #f1f5f9;
             font-size: 0.95rem;
         }
-
         .project-detail ul li:last-child {
             border-bottom: none;
         }
-
-        .project-detail .highlight-box {
+        .highlight-box {
             background: #f1f5f9;
             padding: 24px;
             border-radius: 12px;
             margin: 30px 0;
             border-left: 4px solid #2563eb;
         }
-
-        .project-detail .highlight-box strong {
+        .highlight-box strong {
             color: #0f172a;
         }
-
-        .project-detail .code-block {
+        .code-block {
             background: #0f172a;
             color: #e2e8f0;
             padding: 20px;
@@ -95,117 +81,166 @@
             font-size: 0.85rem;
             margin: 20px 0;
         }
-
-        .project-detail .btn-back {
+        .btn-back {
             display: inline-block;
             margin-top: 40px;
             color: #2563eb;
             font-weight: 600;
             text-decoration: none;
         }
-
-        .project-detail .btn-back:hover {
+        .btn-back:hover {
             text-decoration: underline;
         }
 
-        .project-image {
-            width: 100%;
-            border-radius: 12px;
-            margin: 20px 0;
-            border: 1px solid #e2e8f0;
-        }
-
-        /* NOUVEAU : Styles pour les liens de téléchargement */
+        /* SECTION TÉLÉCHARGEMENT */
         .download-section {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 24px;
+            padding: 28px;
             margin: 30px 0;
         }
-
         .download-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
             margin-top: 16px;
         }
-
         .download-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 20px 16px;
             background: #f8fafc;
             border-radius: 8px;
             text-decoration: none;
             color: #0f172a;
-            transition: background 0.2s, transform 0.2s;
-            border: 1px solid transparent;
+            transition: background 0.2s, transform 0.2s, border-color 0.2s;
+            border: 2px solid transparent;
+            text-align: center;
         }
-
         .download-card:hover {
             background: #f1f5f9;
             transform: translateY(-2px);
             border-color: #2563eb;
         }
-
         .download-card .icon {
             font-size: 2.5rem;
             margin-bottom: 8px;
         }
-
         .download-card .label {
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
-
         .download-card .ext {
             font-size: 0.7rem;
             color: #94a3b8;
             margin-top: 4px;
         }
 
-        .external-link {
+        .btn-external {
             display: inline-block;
-            background: #2563eb;
-            color: #ffffff;
             padding: 12px 24px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             transition: background 0.2s;
+            margin-right: 12px;
+            margin-top: 8px;
         }
-
-        .external-link:hover {
-            background: #1d4ed8;
-        }
-
-        .external-link .icon {
-            margin-right: 8px;
-        }
-
-        .btn-google-sheets {
-            display: inline-block;
+        .btn-google {
             background: #0f9d58;
             color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
         }
-
-        .btn-google-sheets:hover {
+        .btn-google:hover {
             background: #0b7e48;
         }
+        .btn-github {
+            background: #0f172a;
+            color: #ffffff;
+        }
+        .btn-github:hover {
+            background: #1e293b;
+        }
 
-        .btn-google-sheets .icon {
-            margin-right: 8px;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2563eb;
+        }
+        .stat-card .label {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .table-wrap th {
+            background: #f1f5f9;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .table-wrap td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .table-wrap tr:hover td {
+            background: #f8fafc;
+        }
+
+        .badge-red {
+            display: inline-block;
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-green {
+            display: inline-block;
+            background: #dcfce7;
+            color: #16a34a;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-orange {
+            display: inline-block;
+            background: #fef3c7;
+            color: #d97706;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
+
     <!-- ============ NAVIGATION ============ -->
     <nav class="navbar">
         <div class="container">
@@ -224,20 +259,39 @@
         </div>
     </nav>
 
-    <!-- ============ PROJET DÉTAIL ============ -->
+    <!-- ============ PROJET ============ -->
     <section class="project-detail">
         <div class="container">
-            <!-- En-tête -->
+
             <span style="background:#2563eb; color:white; padding:4px 12px; border-radius:12px; font-size:0.7rem; font-weight:600;">⭐ Projet</span>
             <h1>📊 Scoring de Risque de Défaillance</h1>
-            
+
             <div class="meta">
                 <span>📅 Janvier 2025</span>
                 <span class="tag-blue">🐍 Python</span>
-                <span class="tag-blue">📊 Google Sheets</span>
-                <span class="tag-blue">📈 Excel</span>
-                <span class="tag-blue">🎯 Analyse financière</span>
+                <span class="tag-blue">📊 Excel</span>
+                <span class="tag-blue">📈 Analyse financière</span>
                 <span class="tag-blue">🏛️ Restructuration</span>
+            </div>
+
+            <!-- ============ STATS RAPIDES ============ -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">20</div>
+                    <div class="label">Entreprises analysées</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">10</div>
+                    <div class="label">En zone rouge ⚠️</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">50%</div>
+                    <div class="label">Taux de risque élevé</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">80%</div>
+                    <div class="label">Gain de temps estimé</div>
+                </div>
             </div>
 
             <!-- ============ SECTION TÉLÉCHARGEMENT ============ -->
@@ -246,109 +300,147 @@
                 <p style="color:#64748b; font-size:0.95rem;">
                     Accédez aux fichiers interactifs et à la présentation complète.
                 </p>
-                
+
                 <div class="download-grid">
-                    <a href="scoring_risque.xlsx" download class="download-card">
+                    <a href="Scoring_Risques.xlsx" download class="download-card">
                         <span class="icon">📊</span>
                         <span class="label">Excel</span>
-                        <span class="ext">.xlsx • Données et calculs</span>
+                        <span class="ext">.xlsx • 20 entreprises</span>
                     </a>
-                    <a href="scoring_risque.pdf" target="_blank" class="download-card">
+                    <a href="Canva_docs_lettre_de_recommandation_simple.pdf" target="_blank" class="download-card">
                         <span class="icon">📄</span>
-                        <span class="label">PDF</span>
-                        <span class="ext">.pdf • Présentation complète</span>
+                        <span class="label">Présentation PDF</span>
+                        <span class="ext">.pdf • 5 pages</span>
                     </a>
                     <a href="scoring_risque.ipynb" download class="download-card">
                         <span class="icon">📓</span>
-                        <span class="label">Notebook</span>
-                        <span class="ext">.ipynb • Code Python</span>
+                        <span class="label">Notebook Python</span>
+                        <span class="ext">.ipynb • Code complet</span>
                     </a>
                     <a href="data/entreprises_fictives.csv" download class="download-card">
                         <span class="icon">📋</span>
-                        <span class="label">Données</span>
-                        <span class="ext">.csv • 20 entreprises</span>
+                        <span class="label">Données CSV</span>
+                        <span class="ext">.csv • Données brutes</span>
                     </a>
                 </div>
 
-                <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-                    <a href="https://docs.google.com/spreadsheets/d/1vYii9bIY0uhxBrL5FgQv-0cl6puXHtG4v2C9593RoBc" target="_blank" class="btn-google-sheets">
-                        <span class="icon">🔗</span> Voir le Google Sheets
+                <div style="margin-top:20px; display:flex; flex-wrap:wrap;">
+                    <a href="https://docs.google.com/spreadsheets/d/1vYii9bIY0uhxBrL5FgQv-0cl6puXHtG4v2C9593RoBc" target="_blank" class="btn-external btn-google">
+                        🔗 Voir sur Google Sheets
                     </a>
-                    <a href="https://github.com/Data-Too/FinanceRS/tree/main/projets/scoring-risque" target="_blank" class="external-link" style="background:#0f172a;">
-                        <span class="icon">🐙</span> Voir sur GitHub
+                    <a href="https://github.com/Data-Too/FinanceRS/tree/main/projets/scoring-risque" target="_blank" class="btn-external btn-github">
+                        🐙 Voir sur GitHub
                     </a>
                 </div>
             </div>
 
-            <!-- Description -->
+            <!-- ============ CONTEXTE ============ -->
             <h2>🎯 Contexte</h2>
             <p>
-                Ce projet simule un <strong>outil d'aide à la décision</strong> pour un cabinet d'administrateur judiciaire. 
-                L'objectif est d'identifier rapidement les entreprises présentant un risque élevé de <strong>cessation de paiement</strong> 
-                à partir de leurs données financières.
+                Ce projet simule un <strong>outil d'aide à la décision</strong> pour un cabinet d'administrateur judiciaire.
+                L'objectif est d'identifier rapidement les entreprises présentant un risque élevé de
+                <strong>cessation de paiement</strong> à partir de leurs données financières.
             </p>
 
             <div class="highlight-box">
                 <strong>💡 Problématique métier :</strong><br>
-                Un administrateur judiciaire reçoit des dizaines de dossiers d'entreprises en difficulté. 
+                Un administrateur judiciaire reçoit des dizaines de dossiers d'entreprises en difficulté.
                 Comment prioriser les dossiers les plus urgents ? Comment objectiver le diagnostic pour le tribunal ?
             </div>
 
-            <!-- Approche -->
-            <h2>⚙️ Approche méthodologique</h2>
+            <!-- ============ MÉTHODOLOGIE ============ -->
+            <h2>⚙️ Méthodologie</h2>
             <ul>
-                <li><strong>1. Collecte des données :</strong> 20 entreprises avec 7 indicateurs financiers clés</li>
+                <li><strong>1. Collecte des données :</strong> 20 entreprises, 7 indicateurs financiers</li>
                 <li><strong>2. Calcul des ratios :</strong> Marge nette, endettement, trésorerie</li>
                 <li><strong>3. Construction du score :</strong> Pondération des indicateurs → score sur 100</li>
                 <li><strong>4. Catégorisation :</strong> 🟢 Faible / 🟠 Modéré / 🔴 Élevé</li>
-                <li><strong>5. Visualisations :</strong> Graphiques pour une prise de décision rapide</li>
             </ul>
 
-            <!-- Résultats -->
-            <h2>📋 Résultats clés</h2>
             <div class="highlight-box">
-                <strong>🔍 20 entreprises analysées</strong> - 4 secteurs<br>
-                <strong>⚠️ 10 entreprises en zone rouge (50%)</strong> → Risque élevé<br>
-                <strong>🏢 L'immobilier : 80% en zone rouge</strong> → Alerte sectorielle<br>
-                <strong>📊 Gain de temps : 80%</strong> de réduction du temps de screening
+                <strong>🔑 Formule du score :</strong><br>
+                <code>Score = (Endettement × 30) + (Retard × 1,5) + (Trésorerie × -20) + (Marge × -1)</code>
             </div>
 
-            <!-- Extrait de code -->
-            <h2>💻 Extrait du code</h2>
-            <div class="code-block">
-                <pre style="margin:0; font-family: monospace;">
-# Calcul du score de risque
-df['score_risque'] = (
-    (df['ratio_endettement'] * 30) +
-    (df['retard_paiement'] * 1.5) +
-    (df['ratio_tresorerie'] * -20) +
-    (df['marge_nette'] * -1)
-)
+            <!-- ============ RÉSULTATS ============ -->
+            <h2>📋 Résultats</h2>
 
-# Normalisation sur 100
-df['score_norm'] = (df['score_risque'] - df['score_risque'].min()) / 
-                   (df['score_risque'].max() - df['score_risque'].min()) * 100
-
-# Catégorisation
-def categorie_risque(score):
-    if score < 30: return '🟢 Faible'
-    elif score < 60: return '🟠 Modéré'
-    else: return '🔴 Élevé'
-                </pre>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Catégorie</th><th>Nombre</th><th>Pourcentage</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="badge-green">🟢 Faible</span></td><td>5</td><td>25%</td></tr>
+                        <tr><td><span class="badge-orange">🟠 Modéré</span></td><td>5</td><td>25%</td></tr>
+                        <tr><td><span class="badge-red">🔴 Élevé</span></td><td>10</td><td>50%</td></tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Compétences -->
+            <div class="highlight-box">
+                <strong>⚠️ 50% des entreprises en zone rouge</strong><br>
+                Le secteur immobilier concentre 80% des risques élevés (4 entreprises sur 5).
+            </div>
+
+            <!-- ============ TOP 5 ============ -->
+            <h2>🏆 Top 5 des entreprises les plus risquées</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>#</th><th>Entreprise</th><th>Secteur</th><th>Score</th><th>Trésorerie</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td><strong>SCI SIGMA</strong></td><td>Immobilier</td><td><span class="badge-red">81.0</span></td><td>-8 000 €</td></tr>
+                        <tr><td>2</td><td><strong>SAS EPSILON</strong></td><td>Construction</td><td><span class="badge-red">79.0</span></td><td>-15 000 €</td></tr>
+                        <tr><td>3</td><td><strong>SARL LAMBDA</strong></td><td>Immobilier</td><td><span class="badge-red">76.0</span></td><td>12 000 €</td></tr>
+                        <tr><td>4</td><td><strong>SAS KAPPA</strong></td><td>Construction</td><td><span class="badge-red">76.0</span></td><td>-25 000 €</td></tr>
+                        <tr><td>5</td><td><strong>SCI NU</strong></td><td>Immobilier</td><td><span class="badge-red">68.0</span></td><td>8 000 €</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============ RECOMMANDATIONS ============ -->
+            <h2>💡 Recommandations</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Urgence</th><th>Entreprises</th><th>Action</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge-red">Immédiate</span></td>
+                            <td>SCI SIGMA, SAS EPSILON, SARL LAMBDA, SAS KAPPA</td>
+                            <td>Réunion sous 48h</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-orange">Rapide</span></td>
+                            <td>SCI NU, SCI GAMMA, EURL OMEGA, SARL ZETA, SAS UPSILON</td>
+                            <td>Revue sous 15 jours</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-green">Surveillance</span></td>
+                            <td>Autres 10 entreprises</td>
+                            <td>Suivi mensuel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============ COMPÉTENCES ============ -->
             <h2>🛠️ Compétences démontrées</h2>
             <ul>
                 <li>✅ Analyse financière (ratios, trésorerie, endettement)</li>
                 <li>✅ Modélisation de scoring de risque</li>
-                <li>✅ Automatisation des calculs (Google Sheets)</li>
+                <li>✅ Automatisation des calculs (Excel / Google Sheets)</li>
                 <li>✅ Data visualisation et reporting</li>
                 <li>✅ Capacité à formuler des recommandations stratégiques</li>
             </ul>
 
-            <!-- Lien retour -->
             <a href="../../index.html#projets" class="btn-back">← Retour aux projets</a>
+
         </div>
     </section>
 
@@ -360,12 +452,10 @@ def categorie_risque(score):
     </footer>
 
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
+
 </body>
 </html>
