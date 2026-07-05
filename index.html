@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Analytics - Projets d'Analyse Financière</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">📊</span>
+                <span class="brand-text">Finance Analytics</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🚀 Portfolio Finance</div>
+                <h1>Analyse Financière & <span class="highlight">Restructuration</span> d'Entreprises</h1>
+                <p class="hero-subtitle">
+                    Projets conçus pour la <strong>détection de risques</strong>, le <strong>pilotage de trésorerie</strong>, 
+                    les <strong>prévisions financières</strong> et la <strong>modélisation de scénarios</strong> 
+                    de restructuration.
+                </p>
+                <div class="hero-badges">
+                    <span class="badge">📊 Analyse financière</span>
+                    <span class="badge">💰 Restructuration</span>
+                    <span class="badge">📈 Prévisions</span>
+                    <span class="badge">🏦 Trésorerie</span>
+                    <span class="badge">⚠️ Détection de risques</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projets" class="btn-primary">Voir les projets ↓</a>
+                    <a href="#contact" class="btn-secondary">Me contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJETS SECTION ============ -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🚀 Projets Finance</h2>
+                <p class="section-subtitle">
+                    Chaque projet simule un cas concret d'analyse financière pour des cabinets 
+                    d'administrateur judiciaire, de conseil ou des directions financières.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- ===== PROJET 1 : Scoring de Risque ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📊</span>
+                        <span class="project-status">⭐ Nouveau</span>
+                    </div>
+                    <h3>Scoring de Risque de Défaillance</h3>
+                    <p>
+                        Modèle de scoring identifiant les entreprises à risque élevé 
+                        de cessation de paiement à partir de leurs ratios financiers 
+                        (endettement, trésorerie, marge, productivité).
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Analyse financière</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projets/restructuration/scoring-risque/" class="btn-project">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 2 : Dashboard Trésorerie ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">💰</span>
+                        <span class="project-status">⭐ Nouveau</span>
+                    </div>
+                    <h3>Dashboard de Trésorerie Interactive</h3>
+                    <p>
+                        Visualisation des flux de trésorerie avec identification 
+                        des périodes de tension, génération d'alertes automatiques 
+                        et recommandations.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Plotly</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Trésorerie</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projets/tresorerie/dashboard/" class="btn-project">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 3 : Plan de Restructuration ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📈</span>
+                        <span class="project-status">⭐ Nouveau</span>
+                    </div>
+                    <h3>Plan de Restructuration - Scénarios</h3>
+                    <p>
+                        Simulation de 5 scénarios de sauvegarde (réduction de charges, 
+                        cession d'actifs, report de dettes) avec comparaison des 
+                        impacts financiers.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">Modélisation</span>
+                        <span class="tag">Scénarios</span>
+                        <span class="tag">Business Plan</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projets/restructuration/business-plan/" class="btn-project">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 4 : Prévisions de CA ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📊</span>
+                        <span class="project-status">📅 À venir</span>
+                    </div>
+                    <h3>Prévision de Chiffre d'Affaires</h3>
+                    <p>
+                        Modèle de prévision des ventes sur 12 mois utilisant des 
+                        méthodes statistiques (ARIMA, Prophet) pour anticiper les 
+                        tendances et ajuster la stratégie.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Prophet</span>
+                        <span class="tag">Prévisions</span>
+                        <span class="tag">Time Series</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">En cours de développement</span>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 5 : Analyse de Rentabilité ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📉</span>
+                        <span class="project-status">📅 À venir</span>
+                    </div>
+                    <h3>Analyse de Rentabilité par Produit</h3>
+                    <p>
+                        Dashboard interactif analysant la rentabilité de différents 
+                        produits/services pour identifier les leviers de croissance 
+                        et d'optimisation.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Analyse de marge</span>
+                        <span class="tag">Coûts complets</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">En cours de développement</span>
+                    </div>
+                </div>
+
+                <!-- ===== PROJET 6 : Simulation BFR ===== -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🏦</span>
+                        <span class="project-status">📅 À venir</span>
+                    </div>
+                    <h3>Simulation du Besoin en Fonds de Roulement</h3>
+                    <p>
+                        Modélisation du BFR avec simulation de l'impact des délais 
+                        de paiement clients/fournisseurs sur la trésorerie de l'entreprise.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">BFR</span>
+                        <span class="tag">Trésorerie</span>
+                        <span class="tag">Simulation</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="btn-project-disabled">En cours de développement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ À PROPOS SECTION ============ -->
+    <section id="a-propos" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>👋 À propos de ce portfolio</h2>
+                    <p>
+                        Ce site regroupe mes projets en <strong>analyse financière</strong> 
+                        et <strong>finance d'entreprise</strong>. Chaque projet est conçu 
+                        pour répondre à un besoin opérationnel rencontré par les 
+                        <strong>administrateurs judiciaires</strong>, les <strong>directions financières</strong> 
+                        ou les <strong>cabinets de conseil</strong>.
+                    </p>
+                    <p>
+                        L'objectif est de démontrer ma capacité à :
+                    </p>
+                    <ul>
+                        <li>✅ Analyser des situations financières complexes</li>
+                        <li>✅ Identifier les risques et les opportunités</li>
+                        <li>✅ Proposer des recommandations claires et opérationnelles</li>
+                        <li>✅ Automatiser les tâches répétitives pour gagner en efficacité</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Projets</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Domaines couverts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Cas concrets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES SECTION ============ -->
+    <section id="competences" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🛠️ Compétences Finance & Data</h2>
+                <p class="section-subtitle">
+                    Les compétences techniques et métier mobilisées dans mes projets.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📊 Analyse Financière</h3>
+                    <ul>
+                        <li>Analyse des flux de trésorerie</li>
+                        <li>Calcul des ratios (liquidité, endettement, rentabilité)</li>
+                        <li>Diagnostic d'entreprise</li>
+                        <li>Modélisation DCF</li>
+                        <li>Calcul du BFR</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🐍 Data & Programmation</h3>
+                    <ul>
+                        <li>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li>Scikit-learn (modélisation prédictive)</li>
+                        <li>Plotly (visualisation interactive)</li>
+                        <li>SQL (requêtes complexes)</li>
+                        <li>Power BI / Tableau</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📑 Modélisation & Outils</h3>
+                    <ul>
+                        <li>Excel (Power Query, TCD, macros VBA)</li>
+                        <li>Modélisation de scénarios</li>
+                        <li>Business Plan</li>
+                        <li>Simulation financière</li>
+                        <li>Automatisation de reporting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🏢 Métier Finance</h3>
+                    <ul>
+                        <li>Restructuration d'entreprises</li>
+                        <li>Détection de risques</li>
+                        <li>Contrôle de gestion</li>
+                        <li>Audit financier</li>
+                        <li>Conseil en gestion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📬 Contact</h2>
+                <p class="section-subtitle">
+                    Intéressé par mon profil pour un poste en finance ou restructuration ?
+                    N'hésitez pas à me contacter !
+                </p>
+            </div>
+
+            <div class="contact-cards">
+                <a href="mailto:votre.email@email.com" class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">votre.email@email.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/votreprofil" class="contact-card" target="_blank">
+                    <span class="contact-icon">💼</span>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">Mon profil LinkedIn</span>
+                </a>
+                <a href="https://github.com/votrepseudo" class="contact-card" target="_blank">
+                    <span class="contact-icon">🐙</span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">@votrepseudo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                © 2025 - Finance Analytics | 
+                <a href="https://github.com/votrepseudo/finance-analytics" target="_blank">GitHub</a>
+            </p>
+            <p class="footer-sub">
+                Projets d'analyse financière pour la restructuration et le pilotage d'entreprises
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
