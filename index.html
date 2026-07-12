@@ -4,14 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Finance Analytics – Portfolio de projets financiers</title>
-
-    <!-- ===== POLICE ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
     <style>
-        /* ============================================================
-           RESET & BASE
-        ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -31,9 +26,7 @@
             padding: 0 24px;
         }
 
-        /* ============================================================
-           NAVIGATION
-        ============================================================ */
+        /* ===== NAVIGATION ===== */
         .navbar {
             background: #ffffff;
             padding: 16px 0;
@@ -90,9 +83,7 @@
             color: #0f172a;
         }
 
-        /* ============================================================
-           HERO
-        ============================================================ */
+        /* ===== HERO ===== */
         .hero {
             padding: 80px 0 60px;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -197,9 +188,7 @@
             border-color: #2563eb;
         }
 
-        /* ============================================================
-           PROJETS
-        ============================================================ */
+        /* ===== PROJETS ===== */
         .projects {
             padding: 80px 0;
         }
@@ -237,6 +226,23 @@
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.05s; }
+        .project-card:nth-child(2) { animation-delay: 0.10s; }
+        .project-card:nth-child(3) { animation-delay: 0.15s; }
+        .project-card:nth-child(4) { animation-delay: 0.20s; }
+        .project-card:nth-child(5) { animation-delay: 0.25s; }
+        .project-card:nth-child(6) { animation-delay: 0.30s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .project-card:hover {
@@ -357,12 +363,138 @@
             color: #0f9d58;
         }
 
-        /* ============================================================
-           À PROPOS
-        ============================================================ */
-        .about {
+        /* ===== INSPIRATION WALL (MOODBOARD) ===== */
+        .inspiration {
             padding: 80px 0;
             background: #f1f5f9;
+        }
+
+        .moodboard-block {
+            margin-bottom: 48px;
+        }
+
+        .moodboard-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .moodboard-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .moodboard-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .moodboard-card:nth-child(1) { animation-delay: 0.05s; }
+        .moodboard-card:nth-child(2) { animation-delay: 0.10s; }
+        .moodboard-card:nth-child(3) { animation-delay: 0.15s; }
+        .moodboard-card:nth-child(4) { animation-delay: 0.20s; }
+
+        .moodboard-card:hover {
+            border-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .moodboard-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .moodboard-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .moodboard-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #0f172a;
+        }
+
+        .moodboard-author {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .moodboard-desc {
+            font-size: 0.8rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+
+        .moodboard-comment {
+            font-size: 0.75rem;
+            color: #2563eb;
+            background: rgba(37, 99, 235, 0.06);
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-top: 6px;
+            font-style: italic;
+            border-left: 2px solid #2563eb;
+        }
+
+        .moodboard-quote {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #2563eb;
+            line-height: 1.5;
+        }
+
+        .moodboard-quote + .moodboard-author {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        .book-card .moodboard-icon { color: #2563eb; }
+        .podcast-card .moodboard-icon { color: #7c3aed; }
+        .quote-card .moodboard-icon { color: #d97706; }
+        .figure-card .moodboard-icon { color: #059669; }
+
+        .moodboard-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .moodboard-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== À PROPOS ===== */
+        .about {
+            padding: 80px 0;
+            background: #ffffff;
         }
 
         .about-grid {
@@ -402,7 +534,7 @@
         }
 
         .stat-item {
-            background: #ffffff;
+            background: #f8fafc;
             padding: 20px;
             border-radius: 12px;
             text-align: center;
@@ -421,16 +553,15 @@
             color: #64748b;
         }
 
-        /* ============================================================
-           COMPÉTENCES
-        ============================================================ */
+        /* ===== COMPÉTENCES ===== */
         .skills-section {
             padding: 80px 0;
+            background: #f8fafc;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
         }
 
@@ -463,12 +594,10 @@
             border-bottom: none;
         }
 
-        /* ============================================================
-           CONTACT
-        ============================================================ */
+        /* ===== CONTACT ===== */
         .contact {
             padding: 80px 0;
-            background: #f8fafc;
+            background: #ffffff;
         }
 
         .contact-cards {
@@ -480,7 +609,7 @@
         }
 
         .contact-card {
-            background: #ffffff;
+            background: #f8fafc;
             padding: 24px 32px;
             border-radius: 12px;
             border: 1px solid #e2e8f0;
@@ -517,9 +646,7 @@
             margin-top: 4px;
         }
 
-        /* ============================================================
-           FOOTER
-        ============================================================ */
+        /* ===== FOOTER ===== */
         .footer {
             background: #0f172a;
             color: #94a3b8;
@@ -543,9 +670,7 @@
             color: #64748b;
         }
 
-        /* ============================================================
-           RESPONSIVE
-        ============================================================ */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -603,6 +728,10 @@
             .skills-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .moodboard-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -622,15 +751,17 @@
             .about-stats {
                 grid-template-columns: 1fr;
             }
+
+            .moodboard-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ============================================================
-    NAVIGATION
-    ============================================================ -->
+    <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
@@ -640,6 +771,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#projets">Projets</a></li>
+                <li><a href="#inspiration">Inspiration</a></li>
                 <li><a href="#a-propos">À propos</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -648,9 +780,7 @@
         </div>
     </nav>
 
-    <!-- ============================================================
-    HERO
-    ============================================================ -->
+    <!-- ===== HERO ===== -->
     <section id="accueil" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -671,15 +801,13 @@
                 </div>
                 <div class="hero-actions">
                     <a href="#projets" class="btn-primary">Voir les projets ↓</a>
-                    <a href="#contact" class="btn-secondary">Me contacter</a>
+                    <a href="#inspiration" class="btn-secondary">Mon inspiration</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================
-    PROJETS
-    ============================================================ -->
+    <!-- ===== PROJETS ===== -->
     <section id="projets" class="projects">
         <div class="container">
             <div class="section-header">
@@ -692,9 +820,7 @@
 
             <div class="projects-grid">
 
-                <!-- ==========================================================
-                PROJET 1 : SCORING DE RISQUE ✅ TERMINÉ
-                ========================================================== -->
+                <!-- Projet 1 : Scoring de Risque -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-icon">📊</span>
@@ -715,18 +841,16 @@
                         <span class="tag">Analyse financière</span>
                     </div>
                     <div class="project-links">
-                        <a href="projets/scoring-risque/" class="btn-project">Voir le projet →</a>
+                        <a href="#" class="btn-project">Voir le projet →</a>
                         <div class="project-files">
-                            <a href="projets/scoring-risque/Scoring_Risques.xlsx" download>📊 Excel</a>
-                            <a href="projets/scoring-risque/Canva_docs_lettre_de_recommandation_simple.pdf" target="_blank">📄 PDF</a>
+                            <a href="Scoring_Risques.xlsx" download>📊 Excel</a>
+                            <a href="#" style="color:#94a3b8;">📄 PDF (à venir)</a>
                             <a href="https://docs.google.com/spreadsheets/d/1vYii9bIY0uhxBrL5FgQv-0cl6puXHtG4v2C9593RoBc" target="_blank" class="google-link">🔗 Google Sheets</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- ==========================================================
-                PROJET 2 : RADAR FINANCIER – DASHBOARD TRÉSORERIE ⏳ EN COURS
-                ========================================================== -->
+                <!-- Projet 2 : Radar Financier -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-icon">💰</span>
@@ -756,9 +880,7 @@
                     </div>
                 </div>
 
-                <!-- ==========================================================
-                PROJET 3 : PLAN DE RESTRUCTURATION – SCÉNARIOS ⏳ EN COURS
-                ========================================================== -->
+                <!-- Projet 3 : Plan de Restructuration -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-icon">📈</span>
@@ -788,9 +910,7 @@
                     </div>
                 </div>
 
-                <!-- ==========================================================
-                PROJET 4 : PRÉVISION DE CHIFFRE D'AFFAIRES ⏳ EN COURS
-                ========================================================== -->
+                <!-- Projet 4 : Prévision CA -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-icon">📉</span>
@@ -821,9 +941,7 @@
                     </div>
                 </div>
 
-                <!-- ==========================================================
-                PROJET 5 : ANALYSE DE RENTABILITÉ PAR PRODUIT ⏳ EN COURS
-                ========================================================== -->
+                <!-- Projet 5 : Analyse Rentabilité -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-icon">📊</span>
@@ -854,9 +972,7 @@
                     </div>
                 </div>
 
-                <!-- ==========================================================
-                PROJET 6 : SIMULATION DU BESOIN EN FONDS DE ROULEMENT ⏳ EN COURS
-                ========================================================== -->
+                <!-- Projet 6 : Simulation BFR -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-icon">🏦</span>
@@ -891,9 +1007,144 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    À PROPOS
-    ============================================================ -->
+    <!-- ===== INSPIRATION WALL (MOODBOARD) ===== -->
+    <section id="inspiration" class="inspiration">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎨 Inspiration Wall</h2>
+                <p class="section-subtitle">Ce qui nourrit ma réflexion au quotidien.</p>
+            </div>
+
+            <!-- Livres -->
+            <div class="moodboard-block">
+                <div class="moodboard-title">📚 Livres qui m'ont marquée</div>
+                <div class="moodboard-grid">
+                    <div class="moodboard-card book-card">
+                        <div class="moodboard-icon">📖</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Tomber sept fois, se lever huit</div>
+                            <div class="moodboard-author">Proverbe · Philosophie de vie</div>
+                            <div class="moodboard-desc">Un proverbe qui résonne profondément en moi. Chaque échec est une leçon, chaque chute une opportunité de rebondir plus forte.</div>
+                            <div class="moodboard-comment">💬 "Dans la finance comme dans la vie, la persévérance est la clé. Je ne renonce jamais, j'apprends et je me relève."</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card book-card">
+                        <div class="moodboard-icon">🌌</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Embrasser le ciel immense</div>
+                            <div class="moodboard-author">(À préciser)</div>
+                            <div class="moodboard-desc">Un livre qui m'a appris à voir grand, à repousser mes limites et à ne jamais me fixer de barrières.</div>
+                            <div class="moodboard-comment">💬 "L'ambition n'est pas un défaut, c'est un moteur. Oser rêver grand pour accomplir de grandes choses."</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card book-card">
+                        <div class="moodboard-icon">🔄</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">The Power of Habit</div>
+                            <div class="moodboard-author">Charles Duhigg</div>
+                            <div class="moodboard-desc">Une plongée fascinante dans les mécanismes des habitudes et comment les transformer en leviers de performance.</div>
+                            <div class="moodboard-comment">💬 "La discipline, c'est la constance dans l'effort, même quand la motivation s'essouffle. Une leçon que j'applique chaque jour."</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card book-card">
+                        <div class="moodboard-icon">💰</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Père riche, père pauvre</div>
+                            <div class="moodboard-author">Robert Kiyosaki</div>
+                            <div class="moodboard-desc">Une éducation financière différente sur l'importance de l'investissement et de la liberté financière.</div>
+                            <div class="moodboard-comment">💬 "Faire travailler l'argent pour soi, et non l'inverse. Un changement de mindset qui a transformé ma vision de la finance."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Podcasts -->
+            <div class="moodboard-block">
+                <div class="moodboard-title">🎙️ Podcasts qui m'accompagnent</div>
+                <div class="moodboard-grid">
+                    <div class="moodboard-card podcast-card">
+                        <div class="moodboard-icon">🎧</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">The Economist</div>
+                            <div class="moodboard-desc">Actualité économique mondiale, analyse pointue et accessible. Une source d'inspiration quotidienne.</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card podcast-card">
+                        <div class="moodboard-icon">🎙️</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">M&A Science</div>
+                            <div class="moodboard-desc">Interviews d'experts en fusions-acquisitions, retours d'expérience concrets et conseils pratiques.</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card podcast-card">
+                        <div class="moodboard-icon">📊</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Bloomberg Surveillance</div>
+                            <div class="moodboard-desc">Suivi des marchés en temps réel, tendances macroéconomiques et décryptage des signaux faibles.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Citations -->
+            <div class="moodboard-block">
+                <div class="moodboard-title">💡 Citations qui me guident</div>
+                <div class="moodboard-grid">
+                    <div class="moodboard-card quote-card">
+                        <div class="moodboard-icon">💬</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-quote">"Le risque vient de ne pas savoir ce que l'on fait."</div>
+                            <div class="moodboard-author">— Warren Buffett</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card quote-card">
+                        <div class="moodboard-icon">💡</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-quote">"La finance n'est pas qu'une question de chiffres, c'est une question de confiance et de vision."</div>
+                            <div class="moodboard-author">— Hasnaa Sammoud</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card quote-card">
+                        <div class="moodboard-icon">🌟</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-quote">"La discipline, c'est la constance dans l'effort, même quand la motivation s'essouffle."</div>
+                            <div class="moodboard-author">— The Power of Habit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Figures inspirantes -->
+            <div class="moodboard-block">
+                <div class="moodboard-title">🌟 Figures qui m'inspirent</div>
+                <div class="moodboard-grid">
+                    <div class="moodboard-card figure-card">
+                        <div class="moodboard-icon">🌍</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Miriem Bensalah-Chaqroun</div>
+                            <div class="moodboard-desc">Femme d'affaires marocaine, première femme présidente de la CGEM. Son leadership et sa vision stratégique m'inspirent profondément.</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card figure-card">
+                        <div class="moodboard-icon">💻</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Jensen Huang</div>
+                            <div class="moodboard-desc">PDG de NVIDIA. Sa vision audacieuse et sa persévérance montrent que la technologie peut révolutionner tous les secteurs, y compris la finance.</div>
+                        </div>
+                    </div>
+                    <div class="moodboard-card figure-card">
+                        <div class="moodboard-icon">💪</div>
+                        <div class="moodboard-content">
+                            <div class="moodboard-name">Sara Blakely</div>
+                            <div class="moodboard-desc">Fondatrice de Spanx, milliardaire autodidacte. Son parcours prouve que la détermination et l'innovation peuvent surmonter tous les obstacles.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
     <section id="a-propos" class="about">
         <div class="container">
             <div class="about-grid">
@@ -940,9 +1191,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    COMPÉTENCES
-    ============================================================ -->
+    <!-- ===== COMPÉTENCES ===== -->
     <section id="competences" class="skills-section">
         <div class="container">
             <div class="section-header">
@@ -994,9 +1243,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    CONTACT
-    ============================================================ -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -1021,13 +1268,16 @@
                     <span class="contact-label">GitHub</span>
                     <span class="contact-value">@Data-Too</span>
                 </a>
+                <a href="https://data-too.github.io/Portfolio/" target="_blank" class="contact-card">
+                    <span class="contact-icon">📁</span>
+                    <span class="contact-label">Portfolio</span>
+                    <span class="contact-value">Voir mon autre site</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================
-    FOOTER
-    ============================================================ -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <p>© 2025 – Finance Analytics | Projets d'analyse financière</p>
@@ -1038,12 +1288,18 @@
         </div>
     </footer>
 
-    <!-- ============================================================
-    JAVASCRIPT : MENU MOBILE
-    ============================================================ -->
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
+        // Menu mobile
         document.getElementById('menuToggle').addEventListener('click', function() {
             document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // Fermer le menu au clic sur un lien
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
         });
     </script>
 
